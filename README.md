@@ -76,7 +76,7 @@ Configured **Active Directory Domain Services (AD DS)** on Windows Server 2022.
 
 ### 📸 Screenshot
 
-![Active Directory Setup](user.png)
+![Active Directory Setup](user.jpeg)
 
 ---
 
@@ -93,7 +93,7 @@ Configured Windows Advanced Audit Policies to generate security events required 
 
 ### 📸 Screenshot
 
-![Group Policy Audit Configuration](GPO.png)
+![Group Policy Audit Configuration](GPO.jpeg)
 
 ---
 
@@ -111,7 +111,7 @@ The agents forward security-related logs to the centralized Wazuh Manager for an
 
 ### 📸 Screenshot
 
-![Wazuh Agent Deployment](.png)
+![Wazuh Agent Deployment](windowS.jpeg)
 
 ---
 
@@ -143,7 +143,7 @@ Indicates that a logon attempt failed.
 
 ### 📸 Screenshot
 
-![Event ID 4625 - Failed Logon](event-4625.png)
+![Event ID 4625 - Failed Logon](event-4625.jpeg)
 
 ---
 
@@ -161,7 +161,7 @@ Indicates that a user successfully logged on to the system.
 
 ### 📸 Screenshot
 
-![Event ID 4624 - Successful Logon](event-4624.png)
+![Event ID 4624 - Successful Logon](event-4624.jpeg)
 
 ---
 
@@ -179,7 +179,7 @@ Indicates that a new user account was created.
 
 ### 📸 Screenshot
 
-![Event ID 4720 - User Account Created](event-4720.png)
+![Event ID 4720 - User Account Created](event-4720.jpeg)
 
 ---
 
@@ -197,7 +197,7 @@ Indicates that a user account was modified.
 
 ### 📸 Screenshot
 
-![Event ID 4738 - User Account Modified](event-4738.png)
+![Event ID 4738 - User Account Modified](event-4738.jpeg)
 
 ---
 
@@ -251,7 +251,7 @@ Wazuh was used to monitor connected endpoints for potential security weaknesses.
 
 ### 📸 Screenshot
 
-![Wazuh Vulnerability Detection](vdetection.png)
+![Wazuh Vulnerability Detection](vdetection.jpeg)
 
 ---
 
@@ -356,31 +356,6 @@ This project demonstrates a practical **SOC monitoring environment using Wazuh a
 The lab provides hands-on experience in centralized security monitoring, Windows Event Log analysis, Active Directory auditing, threat detection, vulnerability assessment, and MITRE ATT&CK mapping.
 
 It simulates key activities performed by a **SOC Analyst**, including security alert monitoring, log analysis, suspicious activity investigation, and threat detection.
-
----
-
-# 📂 Project Structure
-
-```text
-active-directory-monitoring/
-│
-├── README.md
-│
-├── Architecture/
-│   └── architecture.png
-│
-└── Screenshots/
-    ├── active-directory-setup.png
-    ├── group-policy-audit.png
-    ├── wazuh-agent.png
-    ├── event-4625.png
-    ├── event-4624.png
-    ├── event-4720.png
-    ├── event-4738.png
-    ├── event-4726.png
-    ├── mitre-mapping.png
-    └── vulnerability-detection.png
-```
 
 ---
 
