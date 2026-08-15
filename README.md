@@ -1,11 +1,6 @@
-# wazuh-active-directory-soc
-SOC lab demonstrating Wazuh SIEM integration with Active Directory for security monitoring, threat detection, and Windows event log analysis.
-
-
-````markdown
 # 🔐 Active Directory Monitoring with Wazuh SIEM
 
-A hands-on SOC Home Lab demonstrating the integration of **Active Directory with Wazuh SIEM** for centralized security monitoring, Windows event log analysis, threat detection, vulnerability assessment, and MITRE ATT&CK mapping..
+A hands-on **SOC Home Lab** demonstrating the integration of **Active Directory with Wazuh SIEM** for centralized security monitoring, Windows Event Log analysis, threat detection, vulnerability assessment, and MITRE ATT&CK mapping.
 
 ---
 
@@ -15,48 +10,22 @@ This project demonstrates the implementation of a **Security Operations Center (
 
 The lab integrates a **Windows Server 2022 Domain Controller** and **Windows 10 Client** with Wazuh to collect, monitor, and analyze security events, authentication activities, and user account changes.
 
-### Objectives
+### 🎯 Objectives
 
-- Centralized security log collection
-- Windows Security Event monitoring
-- Active Directory auditing
-- User account activity monitoring
-- Threat detection and analysis
-- MITRE ATT&CK mapping
-- Vulnerability assessment
-- SOC monitoring workflow
-
----
-
-## 🏗️ Lab Architecture
-
-```text
-                    ┌──────────────────────────┐
-                    │     Wazuh Dashboard      │
-                    │    Security Monitoring   │
-                    └────────────┬─────────────┘
-                                 │
-                                 │
-                    ┌────────────▼─────────────┐
-                    │      Wazuh Manager       │
-                    │        10.x.x.x           │
-                    └────────────┬─────────────┘
-                                 │
-                 ┌───────────────┴───────────────┐
-                 │                               │
-        ┌────────▼─────────┐           ┌────────▼─────────┐
-        │ Windows Server   │           │   Windows 10     │
-        │     2022         │           │     Client       │
-        │                  │           │                  │
-        │ Domain Controller│           │   Wazuh Agent    │
-        │ Active Directory │           │                  │
-        │ Wazuh Agent      │           │                  │
-        └──────────────────┘           └──────────────────┘
-````
+* Centralized security log collection
+* Windows Security Event monitoring
+* Active Directory auditing
+* User account activity monitoring
+* Threat detection and analysis
+* MITRE ATT&CK mapping
+* Vulnerability assessment
+* SOC monitoring workflow
 
 ---
 
-## 🖥️ Environment Setup
+
+
+# 🖥️ Environment Setup
 
 | Component               | Details             |
 | ----------------------- | ------------------- |
@@ -68,13 +37,13 @@ The lab integrates a **Windows Server 2022 Domain Controller** and **Windows 10 
 | Windows Endpoint        | Windows 10          |
 | Linux Endpoint          | 192.x.x.x           |
 | Wazuh Agent             | Windows / Linux     |
-| Active Directory Domain | actived.com         |
+| Active Directory Domain | `actived.com`       |
 | Monitoring              | Wazuh Dashboard     |
 | Threat Framework        | MITRE ATT&CK        |
 
 ---
 
-## 🛠️ Tools & Technologies
+# 🛠️ Tools & Technologies
 
 | Category                | Technology                    |
 | ----------------------- | ----------------------------- |
@@ -105,9 +74,9 @@ Configured **Active Directory Domain Services (AD DS)** on Windows Server 2022.
 * Configured users and groups
 * Joined Windows 10 client to the domain
 
-### Screenshot
+### 📸 Screenshot
 
-*Add screenshot here*
+![Active Directory Setup](user.png)
 
 ---
 
@@ -122,9 +91,9 @@ Configured Windows Advanced Audit Policies to generate security events required 
 * Success Auditing
 * Failure Auditing
 
-### Screenshot
+### 📸 Screenshot
 
-*Add screenshot here*
+![Group Policy Audit Configuration](Screenshots/group-policy-audit.png)
 
 ---
 
@@ -140,9 +109,9 @@ The agents forward security-related logs to the centralized Wazuh Manager for an
 * Windows 10 Client
 * Linux Endpoint
 
-### Screenshot
+### 📸 Screenshot
 
-*Add screenshot here*
+![Wazuh Agent Deployment](Screenshots/wazuh-agent.png)
 
 ---
 
@@ -151,7 +120,7 @@ The agents forward security-related logs to the centralized Wazuh Manager for an
 The following Windows Security Event IDs were monitored using Wazuh.
 
 | Event ID | Detection             |
-| -------- | --------------------- |
+| -------: | --------------------- |
 | **4624** | Successful Logon      |
 | **4625** | Failed Logon          |
 | **4720** | User Account Created  |
@@ -160,88 +129,93 @@ The following Windows Security Event IDs were monitored using Wazuh.
 
 ---
 
-## 🚨 Event ID 4625 – Failed Logon
+# 🚨 Event ID 4625 – Failed Logon
 
-**Description:**
+### Description
+
 Indicates that a logon attempt failed.
 
-**SOC Use Case:**
+### SOC Use Case
 
 * Detect repeated authentication failures
 * Identify suspicious login attempts
 * Investigate possible brute-force activity
 
-### Screenshot
+### 📸 Screenshot
 
-*Add screenshot here*
+![Event ID 4625 - Failed Logon](Screenshots/event-4625.png)
 
 ---
 
-## 🔐 Event ID 4624 – Successful Logon
+# 🔐 Event ID 4624 – Successful Logon
 
-**Description:**
+### Description
+
 Indicates that a user successfully logged on to the system.
 
-**SOC Use Case:**
+### SOC Use Case
 
 * Monitor authentication activity
 * Identify unusual login behavior
 * Support incident investigation
 
-### Screenshot
+### 📸 Screenshot
 
-*Add screenshot here*
+![Event ID 4624 - Successful Logon](Screenshots/event-4624.png)
 
 ---
 
-## 👤 Event ID 4720 – User Account Created
+# 👤 Event ID 4720 – User Account Created
 
-**Description:**
+### Description
+
 Indicates that a new user account was created.
 
-**SOC Use Case:**
+### SOC Use Case
 
 * Monitor unauthorized account creation
 * Detect suspicious account activity
 * Investigate possible persistence
 
-### Screenshot
+### 📸 Screenshot
 
-*Add screenshot here*
+![Event ID 4720 - User Account Created](Screenshots/event-4720.png)
 
 ---
 
-## 🔧 Event ID 4738 – User Account Modified
+# 🔧 Event ID 4738 – User Account Modified
 
-**Description:**
+### Description
+
 Indicates that a user account was modified.
 
-**SOC Use Case:**
+### SOC Use Case
 
 * Monitor account modifications
 * Detect suspicious administrative changes
 * Investigate privilege-related activity
 
-### Screenshot
+### 📸 Screenshot
 
-*Add screenshot here*
+![Event ID 4738 - User Account Modified](Screenshots/event-4738.png)
 
 ---
 
-## 🗑️ Event ID 4726 – User Account Deleted
+# 🗑️ Event ID 4726 – User Account Deleted
 
-**Description:**
+### Description
+
 Indicates that a user account was deleted.
 
-**SOC Use Case:**
+### SOC Use Case
 
 * Monitor account deletion
 * Investigate unauthorized administrative activity
 * Support incident investigation
 
-### Screenshot
+### 📸 Screenshot
 
-*Add screenshot here*
+![Event ID 4726 - User Account Deleted](Screenshots/event-4726.png)
 
 ---
 
@@ -250,14 +224,14 @@ Indicates that a user account was deleted.
 Security events were mapped to relevant **MITRE ATT&CK techniques** to understand their potential relationship with attacker behavior.
 
 | Event ID | MITRE ATT&CK | Technique            |
-| -------- | ------------ | -------------------- |
-| 4625     | **T1110**    | Brute Force          |
-| 4720     | **T1136**    | Create Account       |
-| 4738     | **T1098**    | Account Manipulation |
+| -------: | ------------ | -------------------- |
+|     4625 | **T1110**    | Brute Force          |
+|     4720 | **T1136**    | Create Account       |
+|     4738 | **T1098**    | Account Manipulation |
 
-### Screenshot
+### 📸 Screenshot
 
-*Add screenshot here*
+![MITRE ATT\&CK Mapping](Screenshots/mitre-mapping.png)
 
 > **Note:** A single Windows Event ID does not prove that an attack occurred. Events are analyzed together with other indicators and contextual information.
 
@@ -275,32 +249,40 @@ Wazuh was used to monitor connected endpoints for potential security weaknesses.
 * Security weaknesses
 * Vulnerable packages
 
-### Screenshot
+### 📸 Screenshot
 
-*Add screenshot here*
+![Wazuh Vulnerability Detection](Screenshots/vulnerability-detection.png)
 
 ---
 
 # 🔄 SOC Monitoring Workflow
 
 ```text
-Endpoint Activity
-       ↓
-Windows Security Logs
-       ↓
-Wazuh Agent
-       ↓
-Wazuh Manager
-       ↓
-Log Analysis
-       ↓
-Security Alert
-       ↓
-Alert Investigation
-       ↓
-MITRE ATT&CK Mapping
-       ↓
-Incident Analysis
+                 Endpoint Activity
+                         │
+                         ▼
+              Windows Security Logs
+                         │
+                         ▼
+                    Wazuh Agent
+                         │
+                         ▼
+                   Wazuh Manager
+                         │
+                         ▼
+                    Log Analysis
+                         │
+                         ▼
+                  Security Alert
+                         │
+                         ▼
+                 Alert Investigation
+                         │
+                         ▼
+                MITRE ATT&CK Mapping
+                         │
+                         ▼
+                 Incident Analysis
 ```
 
 ---
@@ -353,17 +335,17 @@ Through this project, I gained hands-on experience in:
 
 # 🚀 Future Improvements
 
-* [ ] Sysmon Integration
-* [ ] Custom Wazuh Detection Rules
-* [ ] Sigma Detection Rules
-* [ ] Active Response Automation
-* [ ] Email Alerting
-* [ ] Brute-Force Detection
-* [ ] Ransomware Detection
-* [ ] PowerShell Monitoring
-* [ ] Threat Hunting
-* [ ] TheHive Integration
-* [ ] Automated Incident Response
+* Sysmon Integration
+* Custom Wazuh Detection Rules
+* Sigma Detection Rules
+* Active Response Automation
+* Email Alerting
+* Brute-Force Detection
+* Ransomware Detection
+* PowerShell Monitoring
+* Threat Hunting
+* TheHive Integration
+* Automated Incident Response
 
 ---
 
@@ -377,3 +359,37 @@ It simulates key activities performed by a **SOC Analyst**, including security a
 
 ---
 
+# 📂 Project Structure
+
+```text
+active-directory-monitoring/
+│
+├── README.md
+│
+├── Architecture/
+│   └── architecture.png
+│
+└── Screenshots/
+    ├── active-directory-setup.png
+    ├── group-policy-audit.png
+    ├── wazuh-agent.png
+    ├── event-4625.png
+    ├── event-4624.png
+    ├── event-4720.png
+    ├── event-4738.png
+    ├── event-4726.png
+    ├── mitre-mapping.png
+    └── vulnerability-detection.png
+```
+
+---
+
+# 👩‍💻 Author
+
+**Tejashri**
+
+**Cybersecurity | SOC Analyst | Security Monitoring**
+
+---
+
+⭐ **If you found this project useful, consider giving the repository a star!**
