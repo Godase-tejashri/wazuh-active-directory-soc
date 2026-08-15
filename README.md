@@ -93,7 +93,7 @@ Configured Windows Advanced Audit Policies to generate security events required 
 
 ### 📸 Screenshot
 
-![Group Policy Audit Configuration](Screenshots/group-policy-audit.png)
+![Group Policy Audit Configuration](GPO.png)
 
 ---
 
@@ -111,7 +111,7 @@ The agents forward security-related logs to the centralized Wazuh Manager for an
 
 ### 📸 Screenshot
 
-![Wazuh Agent Deployment](Screenshots/wazuh-agent.png)
+![Wazuh Agent Deployment](.png)
 
 ---
 
@@ -143,7 +143,7 @@ Indicates that a logon attempt failed.
 
 ### 📸 Screenshot
 
-![Event ID 4625 - Failed Logon](Screenshots/event-4625.png)
+![Event ID 4625 - Failed Logon](event-4625.png)
 
 ---
 
@@ -161,7 +161,7 @@ Indicates that a user successfully logged on to the system.
 
 ### 📸 Screenshot
 
-![Event ID 4624 - Successful Logon](Screenshots/event-4624.png)
+![Event ID 4624 - Successful Logon](event-4624.png)
 
 ---
 
@@ -179,7 +179,7 @@ Indicates that a new user account was created.
 
 ### 📸 Screenshot
 
-![Event ID 4720 - User Account Created](Screenshots/event-4720.png)
+![Event ID 4720 - User Account Created](event-4720.png)
 
 ---
 
@@ -197,7 +197,7 @@ Indicates that a user account was modified.
 
 ### 📸 Screenshot
 
-![Event ID 4738 - User Account Modified](Screenshots/event-4738.png)
+![Event ID 4738 - User Account Modified](event-4738.png)
 
 ---
 
@@ -215,7 +215,7 @@ Indicates that a user account was deleted.
 
 ### 📸 Screenshot
 
-![Event ID 4726 - User Account Deleted](Screenshots/event-4726.png)
+![Event ID 4726 - User Account Deleted]
 
 ---
 
@@ -231,7 +231,7 @@ Security events were mapped to relevant **MITRE ATT&CK techniques** to understan
 
 ### 📸 Screenshot
 
-![MITRE ATT\&CK Mapping](Screenshots/mitre-mapping.png)
+![MITRE ATT\&CK Mapping](mitre.png)
 
 > **Note:** A single Windows Event ID does not prove that an attack occurred. Events are analyzed together with other indicators and contextual information.
 
@@ -251,7 +251,7 @@ Wazuh was used to monitor connected endpoints for potential security weaknesses.
 
 ### 📸 Screenshot
 
-![Wazuh Vulnerability Detection](Screenshots/vulnerability-detection.png)
+![Wazuh Vulnerability Detection](vdetection.png)
 
 ---
 
