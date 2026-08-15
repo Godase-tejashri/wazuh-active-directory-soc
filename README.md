@@ -5,7 +5,7 @@ SOC lab demonstrating Wazuh SIEM integration with Active Directory for security 
 ````markdown
 # 🔐 Active Directory Monitoring with Wazuh SIEM
 
-A hands-on SOC Home Lab demonstrating the integration of **Active Directory with Wazuh SIEM** for centralized security monitoring, Windows event log analysis, threat detection, vulnerability assessment, and MITRE ATT&CK mapping.
+A hands-on SOC Home Lab demonstrating the integration of **Active Directory with Wazuh SIEM** for centralized security monitoring, Windows event log analysis, threat detection, vulnerability assessment, and MITRE ATT&CK mapping..
 
 ---
 
